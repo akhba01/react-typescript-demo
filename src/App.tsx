@@ -1,13 +1,12 @@
 import "./App.css";
-import { ThemeContextProvider } from "./components/context/ThemeContext";
-import { Box } from "./components/context/Box";
+import { Private } from "./components/auth/Private";
+import { Profile } from "./components/auth/Profile";
+
 
 function App() {
   return (
     <div className="App">
-      <ThemeContextProvider>
-        <Box />
-      </ThemeContextProvider>
+     <Private isLoggedIn={false} component={Profile} />
     </div>
   );
 }
